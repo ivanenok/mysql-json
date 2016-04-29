@@ -9,7 +9,6 @@ import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
 import org.springframework.test.context.transaction.TransactionalTestExecutionListener;
-import org.springframework.transaction.annotation.Transactional;
 import ru.ivanenok.MysqlJsonApplication;
 import ru.ivanenok.domain.JSONEntity;
 import ru.ivanenok.domain.PlainEntity;
@@ -24,8 +23,7 @@ import java.util.List;
 @SpringApplicationConfiguration(classes = {MysqlJsonApplication.class})
 @TestExecutionListeners({DependencyInjectionTestExecutionListener.class,
         TransactionalTestExecutionListener.class})
-@Transactional
-public class RepositoryPlainEntityTest {
+public class RepositoryTest {
     @Autowired
     private RepositoryJSONEntity repositoryJSONEntity;
 
